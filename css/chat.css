@@ -1,0 +1,81 @@
+@keyframes blinker {  
+    from { background-color: #F4CCCC; }
+    to { background-color: #FFFFFF; }
+}
+
+.participants{
+    max-height:900px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+.participant{
+    height: 100px;
+    padding-left: 50px;
+    padding-top:20px;
+    border: 1px solid black;
+    border-radius:10px;
+    margin-bottom:20px;
+    margin-right:10px;
+}
+.answered{
+    background-color: #D9EAD3;
+}
+.unanswered{
+    animation-name: blinker;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*background-color: #F4CCCC;*/
+}
+.mainwindow{
+    margin-top:10px;
+}
+.center{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+i{
+    margin:1px;
+}
+.chatmain{
+    padding:20px
+}
+.chathistory{
+    width:100%;
+}
+button{
+    width:100%;
+}
+.buttonicon{
+    color:white;
+}
+.chatwindow{
+    width:100%;
+    margin-top:20px;
+    margin-bottom:20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url("../img/chatback.png");
+    height: 800px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+.mymessage{
+    background-color:rgb(203, 243, 142);
+    text-align:right;
+    border:1px solid black;
+    border-radius:10px;
+    margin-right:20px;
+    margin-bottom:20px;
+    padding:10px;
+}
+.othermessage{
+    background-color: rgb(116, 178, 207);
+    text-align:right;
+    border:1px solid black;
+    border-radius:10px;
+    margin-bottom:20px;
+    margin-left:20px;
+    padding:10px;
+}
+
