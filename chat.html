@@ -21,7 +21,7 @@
                             <div class="row">
                                 <div class="col-12 chathistory">
                                     <h1 id="chattitle" class="center" >Chat History</h1>
-                                    <div class="chatwindow">
+                                    <div id="window" class="chatwindow">
                                         <div class="row">
                                             <div class="col-8 othermessage">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum aliquet felis, 
@@ -94,13 +94,6 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-8 othermessage">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum aliquet felis, 
-                                                id dictum lorem tempus ac. Quisque hendrerit, est vitae luctus hendrerit, neque dui rutrum 
-                                                velit, at finibus odio.
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <div class="col-8 mymessage">
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vestibulum aliquet felis, 
                                                 id dictum lorem tempus ac. Quisque hendrerit, est vitae luctus hendrerit, neque dui rutrum 
                                                 velit, at finibus odio.
@@ -119,7 +112,7 @@
                                             <input type="text" style="width:100%" id="message" />
                                         </div>
                                         <div class="col-1">
-                                            <button type="button" class="btn btn-primary"> 
+                                            <button onclick="sendMessage()" type="button" id="press" class="btn btn-primary"> 
                                                 <i class="fa fa-send-o"></i> Send 
                                             </button>
                                         </div>

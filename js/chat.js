@@ -100,6 +100,20 @@ var newtitle = "<i class='fa fa-"+npcIcons[posicon]+"'/></i>" + " " + npcs[posus
 document.getElementById("chattitle").innerHTML = newtitle;	
 }
 
+var messageTemplate = '<div class="row justify-content-end"><div class="col-8 mymessage"> currentMessage </div></div>';
+
+function sendMessage(){
+	var currentMessage;
+	currentMessage = document.getElementById("message").value;
+	if (currentMessage.length == 0){
+		return false;
+	}
+	var newConvo = messageTemplate.replace("currentMessage", currentMessage);
+	document.getElementById("window").innerHTML += newConvo;
+	console.log(newConvo);
+	
+}
+
 window.onload=function()
 {
     //for(i = 0; i < eliminateNpcs; i++){   
