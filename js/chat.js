@@ -2,7 +2,7 @@
 const npcNumber = 42;
 const eliminateNpcs = 15;
 
-var participantTemplate = '<div class="row"><div class="col participant answered"><i class="fa |class|"/></i> |name| <br /><span class="status" id="|id|"></span></div></div>';
+var participantTemplate = '<div onclick="partselect(posuser, posico)" class="row"><div class="col participant answered"><i class="fa fa-icon"/></i> name <br /><span class="status" ></span></div></div>';
 var npcs = [
     "3dgy3ddie", 
     "SugarLana", 
@@ -67,7 +67,6 @@ var npcIcons = [
     ,"cc-diners-club"
     ,"cc-discover"
     ,"cc-jcb"
-    ,"cc-mastercard"
     ,"cc-paypal"
     ,"cc-stripe"
     ,"cc-visa"
@@ -95,10 +94,32 @@ var npcIcons = [
     ,"truck"
 ];
 
+function partselect(posuser, posicon){
+console.log(npcs[posuser], npcIcons[posicon]);
+var newtitle = "<i class='fa fa-"+npcIcons[posicon]+"'/></i>" + " " + npcs[posuser] + " " + "Chat History";
+document.getElementById("chattitle").innerHTML = newtitle;	
+}
+
 window.onload=function()
 {
-    for(i = 0; i < eliminateNpcs; i++){
-        
-        
-    }
+    //for(i = 0; i < eliminateNpcs; i++){   
+    //}
+	
+	
+	
+	var chat = 15;
+	for (i=0; i < chat; i++){
+		var position = Math.floor((Math.random() * 42));
+		var randomuser = npcs[position];
+	
+		var position2 = Math.floor((Math.random() * 42));
+		var randomicon = npcIcons[position2];
+	
+		var realparticipant = participantTemplate.replace("icon", randomicon).replace("name", randomuser).replace("posuser", position).replace("posico", position2); 
+		document.getElementById("partlist").innerHTML += realparticipant;
+	}
+	
+	console.log(realparticipant);
+	
+	
 };
