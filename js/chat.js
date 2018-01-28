@@ -1,5 +1,8 @@
 
 const npcNumber = 42;
+const eliminateNpcs = 15;
+
+var participantTemplate = '<div class="row"><div class="col participant answered"><i class="fa |class|"/></i> |name| <br /><span class="status" id="|id|"></span></div></div>';
 var npcs = [
     "3dgy3ddie", 
     "SugarLana", 
@@ -92,3 +95,10 @@ var npcIcons = [
     ,"truck"
 ];
 
+window.onload=function()
+{
+    for(i = 0; i < eliminateNpcs; i++){
+        
+        
+    }
+};
