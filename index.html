@@ -13,20 +13,17 @@
 		}
 	</style>
     <body>
-			<div id="robot">
+		<div id="robot">
 			<img src="img/robot_small.png" alt="robot">
 			<h3 id="welcome"><b>Welcome Back,<br>Please Chat With Me Again</b></h3>
-		    </div>
-		
-			<div id="form">
-			<form>
+		</div>
+		<div id="form">
 			Enter Your Agent Nickname:<br>
-			The Nickname Must Be Between 4-8 Characters (Numbers and Letters Only)<br>
+			The Nickname Must Be Between 6-20 Characters (Numbers and Letters Only)<br>
 			<input id="user" type="text" name="user"><br>
-			<input id="submit" type="submit" value="Submit">
-			</form>
-			</div>
-
+			<span style="display:none" class="error" id="notvalid">Username not valid <br></span>
+			<button class="btn btn-success" id="submit">Enter</button>
+		</div>
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/submit.js"></script>
