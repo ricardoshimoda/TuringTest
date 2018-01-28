@@ -2,18 +2,22 @@
 
 var button;
 var info;
+var notvalid;
 
 window.onload = function() {
 	button = document.getElementById("submit");
 	info = document.getElementById("user");
+	notvalid = document.getElementById("notvalid");
 	button.addEventListener("click", submitButton);
 }
 
 function submitButton() {
+
+	notvalid.style.display = 'none';
 	var txt = info.value;
 	var sln = txt.length;
-	if (sln < 4 || sln > 8){
-		alert("this username is not valid");
+	if (sln < 6 || sln > 20){
+		notvalid.style.display = 'block';
 		return false;
 	}
 	
@@ -21,12 +25,9 @@ function submitButton() {
 		var letter = txt.charCodeAt(i);
 		console.log(letter);
 		if (!((letter > 47 && letter < 58)||(letter > 64 && letter < 91)||(letter > 96 && letter < 123))){
-			alert("this username is garbage");
+			notvalid.style.display = 'block';
 			return false;
 		}
 	}
-		
-	console.log(info.value);
-	return false;
-	//respond to submit click
+	window.location.replace('chat.html');
 }
